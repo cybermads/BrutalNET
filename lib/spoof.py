@@ -1,7 +1,5 @@
 # Author: cybermad
 # BrutalNET A DoS denial-of-service through ARP Spoofing.
-# sends ARP packets to every host on the network poisoning its ARP table.
-# When the ARP table becomes corrupted, the data flow is completely distorted, leading to network failure.
 
 from scapy.all import *
 import ipaddress
@@ -78,5 +76,6 @@ def arpspoof():
     time.sleep(2)
     print(f"[{g}+{r}] {b}{iface}{r} {b}{subnet}{r}  {g}>{r} {gateway}{g}::{r}{mac} {c}Network is Down !!{r}")
     attack(gateway, mac, iface)
+
 
 
