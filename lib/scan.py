@@ -46,6 +46,7 @@ $R@i.~~ !     :   ~$$$$$B$$en:``
           """)
 def scan():
     banner()
-    iface = input(f"[{c}+{r}] interface  {c}:{r} ")
+    iface = input(f"[{c}+{r}] interface{c}:{r} ")
     os.system(f"arp-scan -l -I {iface}")
+
     input(f"[{c}+{r}] Finish{c}...{r}")
