@@ -15,7 +15,7 @@ cd BrutalNET
 ls
 ```
 ```
-python brutlnet.py
+python brutalnet.py
 ```
 
 
