@@ -1,4 +1,4 @@
-# BrutalNET - ARP Spoofing Tool 🔥
+# BrutalNET - ARP Attack Tool 🔥
 - sends ARP packets to every host on the network poisoning its ARP table.
 - When the ARP table becomes corrupted, the data flow is completely distorted, leading to network failure.
 
