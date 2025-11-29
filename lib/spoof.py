@@ -1,5 +1,5 @@
 # Author: cybermad
-# BrutalNET A DoS denial-of-service through ARP Spoofing.
+# BrutalNET network denial-of-service through ARP Spoofing.
 
 from scapy.all import *
 import ipaddress
