@@ -35,13 +35,13 @@ $R@i.~~ !     :   ~$$$$$B$$en:``
 ?MXT@Wx.~    :     ~"##*$$$$M~
       
 {r}    
-    {g}[*]{r}      {h}ARP Spoofing Tool.{r}               {g}[*]{r} 
+    {g}[*]{r}      {h}ARP Attack Tool.{r}               {g}[*]{r} 
     {g}[*]{r}      {h}Version : 1.0{r}                    {g}[*]{r} 
     {g}[*]{r}      {h}Created :{c} {c}cybermad{r}               {g}[*]{r}
     {g}[*]{r}      {h}github  : github.com/cybermads{r}   {g}[*]{r}
     {g}[*]{r}      {h}youtube : youtube.com/@cybermads{r} {g}[*]{r}
             
-    {c}ARP Network device discovery.{r}
+    {c}network device discovery.{r}
 
           """)
 def scan():
@@ -50,3 +50,4 @@ def scan():
     os.system(f"arp-scan -l -I {iface}")
 
     input(f"[{c}+{r}] Finish{c}...{r}")
+
