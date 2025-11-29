@@ -23,7 +23,6 @@ python brutalnet.py
 ```
 
 
-# WINDOWS ✅
 # LINUX ✅
 
 
