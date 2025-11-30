@@ -37,7 +37,7 @@ $R@i.~~ !     :   ~$$$$$B$$en:``
 ?MXT@Wx.~    :     ~"##*$$$$M~
       
 {r}    
-    {g}[*]{r}      {h}ARP Attack Tool.{r}               {g}[*]{r} 
+    {g}[*]{r}      {h}ARP Attack Tool.{r}                 {g}[*]{r} 
     {g}[*]{r}      {h}Version : 1.0{r}                    {g}[*]{r} 
     {g}[*]{r}      {h}Created :{c} {c}cybermad{r}               {g}[*]{r}
     {g}[*]{r}      {h}github  : github.com/cybermads{r}   {g}[*]{r}
@@ -78,6 +78,7 @@ def arpspoof():
     time.sleep(2)
     print(f"[{g}+{r}] {b}{iface}{r} {b}{subnet}{r}  {g}>{r} {gateway}{g}::{r}{mac} {c}Network is Down !!{r}")
     attack(gateway, mac, iface)
+
 
 
 
