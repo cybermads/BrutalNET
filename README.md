@@ -1,9 +1,5 @@
 # BrutalNET - ARP Attack Tool 🔥
 - Sends spoofed ARP packets with random MAC addresses to all hosts, corrupting their ARP tables and causing a network denial‑of‑service.
-<img width="1746" height="1122" alt="image" src="https://github.com/user-attachments/assets/fd75287c-0a06-4718-a6f6-8ce0e9278c07" />
-
-<img width="2307" height="1230" alt="image" src="https://github.com/user-attachments/assets/14ebdd50-6526-4eb7-815b-61af1c36d73c" />
-
 
 # ScreenShot 📸
 <img width="1496" height="879" alt="image" src="https://github.com/user-attachments/assets/7b98f033-ccc9-422c-af06-2df36bea99ba" />
