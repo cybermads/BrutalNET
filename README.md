@@ -1,16 +1,10 @@
-# BrutalNET - ARP Attack Tool 🔥
+# BrutalNET V2 🔥
 - Sends spoofed ARP packets with random MAC addresses to all hosts, corrupting their ARP tables and causing a network denial‑of‑service.
 
 # ScreenShot 📸
-<img width="1496" height="879" alt="image" src="https://github.com/user-attachments/assets/7b98f033-ccc9-422c-af06-2df36bea99ba" />
-<img width="1726" height="1172" alt="image" src="https://github.com/user-attachments/assets/e5d17295-41de-4087-a137-62289264a68d" />
-<img width="1887" height="1166" alt="image" src="https://github.com/user-attachments/assets/77e4fa9e-7203-4185-b814-7a430bdec74c" />
+<img width="1561" height="1142" alt="image" src="https://github.com/user-attachments/assets/2501352d-16bf-4edf-84a9-dddd67d80adb" />
+<img width="1912" height="1167" alt="image" src="https://github.com/user-attachments/assets/66aa93a6-11f9-4f99-bb55-6f4b4a6640ba" />
 
-
-
-
-# Overview 😈
-https://github.com/user-attachments/assets/0d9e237d-6833-4889-82b1-bc833e60131a
 
 
 
@@ -25,7 +19,7 @@ cd BrutalNET
 ls
 ```
 ```
-python brutalnet.py
+python main.py
 ```
 
 
