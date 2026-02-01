@@ -18,15 +18,6 @@ BrutalNET flood the network with forged ARP packets poisoning the ARP caches of 
 
 
 
-
-
-```
-[HACKER]                       [VICTIM]
-
-```
-
-
-
 # ScreenShot 
 <img width="1842" height="1160" alt="image" src="https://github.com/user-attachments/assets/a923cdc3-a713-414b-a7e6-9166848503ec" />
 <img width="1912" height="1167" alt="image" src="https://github.com/user-attachments/assets/66aa93a6-11f9-4f99-bb55-6f4b4a6640ba" />
